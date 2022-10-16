@@ -8,13 +8,13 @@ const { v1:uuidv1} = require("uuid")
 
 
 // get the notes
-router.get("/api/notes", (req, res) => {
+router.get("/notes", (req, res) => {
     res.status(200).json(notes)
     console.log(res)
 })
 
 // add a note
-router.post("/api/notes", (req, res) => {
+router.post("/notes", (req, res) => {
     // deconstruct response
     const { title, text} = req.body;
     // if it's all there
