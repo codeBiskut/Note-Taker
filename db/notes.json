@@ -1,62 +1,7 @@
 [
     {
-        "title": "sample title",
+        "title": "sample note",
         "text": "sample text",
         "noteId": "2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d"
-    },
-    {
-        "title": "sdfsdf",
-        "text": "sdfsdf",
-        "noteId": "06294230-4d90-11ed-b580-49f54683a248"
-    },
-    {
-        "title": "asdfasd",
-        "text": "afgdsfg",
-        "noteId": "3f70ff00-4d91-11ed-abff-dd22770004aa"
-    },
-    {
-        "title": "abn",
-        "text": "sdfghg",
-        "noteId": "eacfff90-4d91-11ed-bae5-f3b0547ae9f5"
-    },
-    {
-        "title": "ggg",
-        "text": "ggg",
-        "noteId": "026cc480-4d92-11ed-89f9-833b1ab87ce5"
-    },
-    {
-        "title": "sdf",
-        "text": "sdf",
-        "noteId": "391e1f00-4d93-11ed-89f9-833b1ab87ce5"
-    },
-    {
-        "title": "sdfsdfsdf",
-        "text": "sdfsdfsdf",
-        "noteId": "43254280-4d93-11ed-b0ad-7ba9f8ee4950"
-    },
-    {
-        "title": "sdfsdf",
-        "text": "sdfsdf",
-        "noteId": "51bd5fd0-4d93-11ed-b0ad-7ba9f8ee4950"
-    },
-    {
-        "title": "sdfsdfg",
-        "text": "sdfgsdfg",
-        "noteId": "5bb05f10-4d93-11ed-91ce-ad5312352fc6"
-    },
-    {
-        "title": "sdfsdf",
-        "text": "sdfsdf",
-        "noteId": "6f6c6760-4d93-11ed-91ce-ad5312352fc6"
-    },
-    {
-        "title": "acb",
-        "text": "sdf",
-        "noteId": "d9287800-4d94-11ed-afaf-17619e30a6a0"
-    },
-    {
-        "title": "sdfs",
-        "text": "sdfsdf",
-        "noteId": "ececa460-4d99-11ed-bea3-911c38b569eb"
     }
 ]
