@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const fs = require("fs")
-const db = require("../db/db.json")
+const notes = require("../db/notes.json")
 const { v1:uuidv1} = require("uuid")
 
 // GET /api/notes should read the db.json file and return all saved notes as JSON
@@ -9,41 +9,50 @@ const { v1:uuidv1} = require("uuid")
 
 // get the notes
 router.get("/api/notes", (req, res) => {
-    res.json(db)
+    res.status(200).json(notes)
+    console.log(res)
 })
 
 // add a note
 router.post("/api/notes", (req, res) => {
-    console.log('recieved')
-
     // deconstruct response
     const { title, text} = req.body;
+    // if it's all there
+    if(title && text){
+        // create a new note
+        const newNote = {
+            title,
+            text,
+            noteId: uuidv1()
+        }
 
-    console.log(title, text)
+        const noteLoc = './db/notes.json'
 
-    // // if it's all there
-    // if(title && text){
-    //     // create a new note
-    //     const newNote = {
-    //         title,
-    //         test,
-    //         noteId: uuidv1()
-    //     }
+        // push it to the db file and update the db
+        fs.readFile(noteLoc, 'utf8', (err, data) => {
+            if (err){
+                console.error(err); 
+            }
+            else {
+                const modifiedDb = JSON.parse(data);
+                modifiedDb.push(newNote)
+                fs.writeFile(noteLoc, JSON.stringify(modifiedDb, null, 4), (err) => 
+                err ? console.error(err) : console.info('\n data written to db.json'))
+            }
+        })
 
-    //     const response = {
-    //         status: 'success',
-    //         body: newNote
-    //     }
+        const response = {
+            status: 'success',
+            body: notes
+        }
 
-    //     console.log(response)
-
-    //     // show success
-    //     res.status(201).json(response)
-    // }
-    // // if not, throw error
-    // else{
-    //     res.status(500).json('error')
-    // }
+        // show success
+        res.status(201).json(response)
+    }
+    // if not, throw error
+    else{
+        res.status(500).json('error')
+    }
 })
 
 module.exports = router
